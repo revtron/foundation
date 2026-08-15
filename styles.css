@@ -1128,6 +1128,60 @@ textarea.form-control {
     }
 }
 
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 14px rgba(255, 94, 20, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 6px 24px rgba(255, 94, 20, 0.65);
+        transform: scale(1.04);
+    }
+}
+
+@keyframes pulse-badge {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+    }
+}
+
+/* Loop Animation Assignments */
+.hero-tag {
+    animation: pulse-badge 3s ease-in-out infinite;
+}
+
+.hero-actions .btn-primary {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.program-card {
+    animation: float 6s ease-in-out infinite;
+}
+
+.program-card:nth-child(1) { animation-delay: 0s; }
+.program-card:nth-child(2) { animation-delay: 1.5s; }
+.program-card:nth-child(3) { animation-delay: 3s; }
+.program-card:nth-child(4) { animation-delay: 4.5s; }
+
+/* Gentle hover pause for cards */
+.program-card:hover {
+    animation-play-state: paused;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
     .programs-grid {
