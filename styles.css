@@ -1218,6 +1218,9 @@ textarea.form-control {
     .hamburger {
         display: flex;
     }
+    .hamburger.active span {
+        background-color: var(--text-dark) !important;
+    }
     .nav-menu {
         position: fixed;
         top: 0;
@@ -1255,8 +1258,32 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
     .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    .about-image-badge {
+        padding: 8px 12px;
+        left: 12px;
+        bottom: 12px;
+    }
+    .about-image-badge i {
+        font-size: 1.25rem;
+    }
+    .about-image-badge .badge-text h5 {
+        font-size: 0.95rem;
+    }
+    .about-image-badge .badge-text p {
+        display: none;
     }
     .footer-grid {
         grid-template-columns: 1fr;
