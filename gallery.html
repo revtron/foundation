@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery | Shikshak Shakti Council</title>
+    <meta name="description" content="View photo logs and field media from Shikshak Shakti Council's school workshops, rural outdoor classrooms, and celebrations.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg.jpeg">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Core Style Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header" class="header scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html#home" class="logo-container">
+                    <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="brand-name">SHIKSHAK SHAKTI</span>
+                        <span class="brand-subtitle">COUNCIL</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">Our Mission</a></li>
+                    <li><a href="index.html#initiatives" class="nav-link">Initiatives</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="index.html#involve" class="nav-link">Get Involved</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li class="header-cta-mobile" style="display: none;">
+                        <a href="index.html#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Join the Council</a>
+                    </li>
+                </ul>
+
+                <div class="header-cta">
+                    <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title serif-font">Stories from Classrooms</h1>
+            <p class="page-subtitle">A visual chronicle of our educator workshops, community circles, and doorstep education programs.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="classrooms">Classrooms</button>
+                <button class="filter-btn" data-filter="celebrations">Celebrations</button>
+            </div>
+
+            <!-- Gallery Masonry Grid -->
+            <div class="gallery-grid">
+                <!-- Item 1 -->
+                <div class="gallery-item" data-category="celebrations">
+                    <img src="IMG-20260815-WA0003.jpg" alt="Patriotic Celebrations" data-caption="Independence Day celebrations at our learning center with primary students.">
+                    <div class="gallery-overlay">
+                        <h4>Patriotic Celebrations</h4>
+                        <p>Celebrations</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item" data-category="classrooms">
+                    <img src="IMG-20260814-WA0038.jpg" alt="Nature & Knowledge Session" data-caption="Open-air instruction bridging nature studies with fundamental curriculum concepts.">
+                    <div class="gallery-overlay">
+                        <h4>Nature & Knowledge</h4>
+                        <p>Classrooms</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item" data-category="classrooms">
+                    <img src="IMG-20260815-WA0001.jpg" alt="Doorstep Education" data-caption="Grassroots study circles conducted directly in neighborhood courtyards.">
+                    <div class="gallery-overlay">
+                        <h4>Doorstep Education</h4>
+                        <p>Classrooms</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item" data-category="classrooms">
+                    <img src="IMG-20260814-WA0028.jpg" alt="Focused Writing Practice" data-caption="Foundational writing exercises and personalized primary guidance by trained mentors.">
+                    <div class="gallery-overlay">
+                        <h4>Focused Learning</h4>
+                        <p>Classrooms</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item" data-category="workshops">
+                    <img src="IMG-20260815-WA0005.jpg" alt="Community Circle dialogue" data-caption="Cooperative community circles discussing teacher challenges and localized lessons.">
+                    <div class="gallery-overlay">
+                        <h4>Community Circles</h4>
+                        <p>Workshops</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item" data-category="workshops">
+                    <img src="IMG-20260815-WA0004.jpg" alt="Teacher training session" data-caption="Smart pedagogy instruction and concept explanation with school representatives.">
+                    <div class="gallery-overlay">
+                        <h4>Interactive Instruction</h4>
+                        <p>Workshops</p>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="gallery-item" data-category="workshops">
+                    <img src="IMG-20260815-WA0006.jpg" alt="Teacher Mentor Dialogue" data-caption="Dedicated teacher discussions resolving conceptual and structural hurdles.">
+                    <div class="gallery-overlay">
+                        <h4>Teacher Dialogue</h4>
+                        <p>Workshops</p>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="gallery-item" data-category="workshops">
+                    <img src="IMG-20260814-WA0036.jpg" alt="Shikshak Chaupal Vasant Kunj" data-caption="Interactive discussions with 45+ primary teachers co-creating tactile pedagogy.">
+                    <div class="gallery-overlay">
+                        <h4>Shikshak Chaupal Forum</h4>
+                        <p>Workshops</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo-container">
+                        <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
+                        <div class="logo-text">
+                            <span class="footer-brand-name">SHIKSHAK SHAKTI</span>
+                            <span class="footer-brand-subtitle">COUNCIL</span>
+                        </div>
+                    </div>
+                    <p>A confluence of knowledge, nature, and technology. Dedicated to empowering teachers, training resilient educators, and bringing active pedagogy to public classrooms.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Our Pillars</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#philosophy" class="footer-link">Knowledge Frameworks</a></li>
+                        <li><a href="index.html#philosophy" class="footer-link">Nature Environments</a></li>
+                        <li><a href="index.html#philosophy" class="footer-link">Technology Interventions</a></li>
+                        <li><a href="index.html#initiatives" class="footer-link">Smart Pedagogy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about" class="footer-link">About Founders</a></li>
+                        <li><a href="index.html#initiatives" class="footer-link">Shikshak Chaupal</a></li>
+                        <li><a href="index.html#involve" class="footer-link">Trainer Opportunities</a></li>
+                        <li><a href="index.html#contact" class="footer-link">Contact Desk</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Stay Connected</h4>
+                    <p>Join our newsletter to receive training schedules and field logs from our council chapters.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Email Address" required aria-label="Email Address">
+                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-chevron-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--accent-mint); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
+                <div class="footer-bottom-links">
+                    <a href="index.html#contact">Privacy Guidelines</a>
+                    <a href="index.html#contact">Terms of Engagement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Calendly Button -->
+    <a href="https://calendly.com/shikshak-shakti-council/counselling" target="_blank" class="floating-calendly-btn" aria-label="Book 1:1 Counselling Session">
+        <i class="fas fa-calendar-check"></i>
+        <span>1:1 Counselling</span>
+    </a>
+
+    <!-- Core Interactions Logic -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Filter Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            if (item.getAttribute('data-category') === filterValue) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Lightbox Logic
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.getElementById('lightbox-close');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+            
+            let visibleImages = [];
+            let currentImageIdx = 0;
+
+            const updateVisibleImages = () => {
+                visibleImages = [];
+                galleryItems.forEach(item => {
+                    if (item.style.display !== 'none') {
+                        const img = item.querySelector('img');
+                        visibleImages.push({
+                            src: img.getAttribute('src'),
+                            alt: img.getAttribute('alt'),
+                            caption: img.getAttribute('data-caption')
+                        });
+                    }
+                });
+            };
+
+            const showLightboxImage = (idx) => {
+                currentImageIdx = (idx + visibleImages.length) % visibleImages.length;
+                const activeImg = visibleImages[currentImageIdx];
+                lightboxImg.setAttribute('src', activeImg.src);
+                lightboxImg.setAttribute('alt', activeImg.alt);
+                lightboxCaption.innerText = activeImg.caption;
+            };
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    updateVisibleImages();
+                    const clickedImg = item.querySelector('img');
+                    const clickedSrc = clickedImg.getAttribute('src');
+                    
+                    currentImageIdx = visibleImages.findIndex(img => img.src === clickedSrc);
+                    showLightboxImage(currentImageIdx);
+                    
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Stop scrolling
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Re-enable scroll
+            });
+
+            nextBtn.addEventListener('click', () => {
+                showLightboxImage(currentImageIdx + 1);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                showLightboxImage(currentImageIdx - 1);
+            });
+
+            // Close lightbox on clicking backdrop
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close lightbox on ESC, navigate with arrow keys
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        lightbox.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    } else if (e.key === 'ArrowRight') {
+                        showLightboxImage(currentImageIdx + 1);
+                    } else if (e.key === 'ArrowLeft') {
+                        showLightboxImage(currentImageIdx - 1);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

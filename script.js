@@ -116,16 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(statsSection);
     }
 
-    // Contact Form Submission Mock
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+    // Contact Forms Submission Mock
+    const individualForm = document.getElementById('individual-form');
+    const organizationForm = document.getElementById('organization-form');
+
+    if (individualForm) {
+        individualForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Basic validation
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
 
             if (!name || !email || !message) {
@@ -133,22 +133,81 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Mock success notification
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const submitBtn = individualForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             
             submitBtn.disabled = true;
-            submitBtn.style.backgroundColor = '#00a896';
-            submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent Successfully!';
+            submitBtn.style.backgroundColor = 'var(--accent-mint)';
+            submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Request Submitted!';
             
             setTimeout(() => {
-                contactForm.reset();
+                individualForm.reset();
                 submitBtn.disabled = false;
                 submitBtn.style.backgroundColor = '';
                 submitBtn.innerHTML = originalText;
             }, 3000);
         });
     }
+
+    if (organizationForm) {
+        organizationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const orgName = document.getElementById('org-name').value;
+            const contactName = document.getElementById('contact-name').value;
+            const contactEmail = document.getElementById('contact-email').value;
+            const proposal = document.getElementById('org-proposal').value;
+
+            if (!orgName || !contactName || !contactEmail || !proposal) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            const submitBtn = organizationForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.style.backgroundColor = 'var(--accent-mint)';
+            submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Proposal Submitted!';
+            
+            setTimeout(() => {
+                organizationForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.style.backgroundColor = '';
+                submitBtn.innerHTML = originalText;
+            }, 3000);
+        });
+    }
+
+    // Form Tabs Toggles
+    const tabBtns = document.querySelectorAll('.form-tab-btn');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const targetTab = btn.getAttribute('data-tab');
+            if (targetTab === 'individual') {
+                if (individualForm) {
+                    individualForm.style.display = 'block';
+                    individualForm.classList.add('active');
+                }
+                if (organizationForm) {
+                    organizationForm.style.display = 'none';
+                    organizationForm.classList.remove('active');
+                }
+            } else {
+                if (individualForm) {
+                    individualForm.style.display = 'none';
+                    individualForm.classList.remove('active');
+                }
+                if (organizationForm) {
+                    organizationForm.style.display = 'block';
+                    organizationForm.classList.add('active');
+                }
+            }
+        });
+    });
 
     // Newsletter Submission Mock
     const newsletterForm = document.querySelector('.newsletter-form');
@@ -163,4 +222,91 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Hero Background Slideshow
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            heroSlides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % heroSlides.length;
+            heroSlides[currentSlide].classList.add('active');
+        }, 5500);
+    }
+
+    // Shikshak Chaupal Looping Slider
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (slides.length > 0) {
+        let activeIdx = 0;
+        let sliderInterval;
+
+        const updateSlider = (newIdx) => {
+            slides[activeIdx].classList.remove('active');
+            dots[activeIdx].classList.remove('active');
+            
+            activeIdx = (newIdx + slides.length) % slides.length;
+            
+            slides[activeIdx].classList.add('active');
+            dots[activeIdx].classList.add('active');
+        };
+
+        const nextSlide = () => updateSlider(activeIdx + 1);
+        const prevSlide = () => updateSlider(activeIdx - 1);
+
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                updateSlider(idx);
+                resetInterval();
+            });
+        });
+
+        const startInterval = () => {
+            sliderInterval = setInterval(nextSlide, 5000);
+        };
+        const resetInterval = () => {
+            clearInterval(sliderInterval);
+            startInterval();
+        };
+
+        startInterval();
+    }
+
+    // FAQ Accordion Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        const answerDiv = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-question i');
+
+        questionBtn.addEventListener('click', () => {
+            const isVisible = answerDiv.style.display === 'block';
+            
+            // Close all first
+            document.querySelectorAll('.faq-answer').forEach(div => div.style.display = 'none');
+            document.querySelectorAll('.faq-question i').forEach(i => {
+                i.className = 'fas fa-plus';
+                i.style.transform = 'none';
+            });
+
+            // Toggle active
+            if (!isVisible) {
+                answerDiv.style.display = 'block';
+                icon.className = 'fas fa-minus';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
 });
