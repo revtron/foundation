@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Gallery | Shikshak Shakti Council</title>
     <meta name="description" content="View photo logs and field media from Shikshak Shakti Council's school workshops, rural outdoor classrooms, and celebrations.">
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg.jpeg">
+    <link rel="icon" type="image/png" href="ssc.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Core Style Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,7 +28,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html#home" class="logo-container">
-                    <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="logo-img">
+                    <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="logo-img">
                     <div class="logo-text">
                         <span class="brand-name">SHIKSHAK SHAKTI</span>
                         <span class="brand-subtitle">COUNCIL</span>
@@ -35,12 +44,12 @@
                     <li><a href="index.html#involve" class="nav-link">Get Involved</a></li>
                     <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                     <li class="header-cta-mobile" style="display: none;">
-                        <a href="index.html#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Join the Council</a>
+                        <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
                     </li>
                 </ul>
 
                 <div class="header-cta">
-                    <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
+                    <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-user-plus"></i> Join the Council</a>
                 </div>
 
                 <button class="hamburger" aria-label="Toggle navigation menu">
@@ -54,6 +63,7 @@
 
     <!-- Page Header -->
     <section class="page-header">
+        <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
         <div class="container">
             <h1 class="page-title serif-font">Stories from Classrooms</h1>
             <p class="page-subtitle">A visual chronicle of our educator workshops, community circles, and doorstep education programs.</p>
@@ -61,7 +71,7 @@
     </section>
 
     <!-- Gallery Grid Section -->
-    <section class="section" style="background-color: var(--bg-light);">
+    <section class="section">
         <div class="container">
             <!-- Filter Bar -->
             <div class="filter-bar">
@@ -165,7 +175,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="footer-logo-container">
-                        <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
+                        <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
                         <div class="logo-text">
                             <span class="footer-brand-name">SHIKSHAK SHAKTI</span>
                             <span class="footer-brand-subtitle">COUNCIL</span>
@@ -199,13 +209,13 @@
                     <p>Join our newsletter to receive training schedules and field logs from our council chapters.</p>
                     <form class="newsletter-form">
                         <input type="email" class="form-control" placeholder="Email Address" required aria-label="Email Address">
-                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-chevron-right"></i></button>
+                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--accent-mint); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
+                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--clr-emerald-400); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
                 <div class="footer-bottom-links">
                     <a href="index.html#contact">Privacy Guidelines</a>
                     <a href="index.html#contact">Terms of Engagement</a>
@@ -220,6 +230,10 @@
         <span>1:1 Counselling</span>
     </a>
 
+    <!-- Three.js 3D WebGL Library & GSAP Animation Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Core Interactions Logic -->
     <script src="script.js"></script>
     <script>
@@ -292,13 +306,13 @@
                     showLightboxImage(currentImageIdx);
                     
                     lightbox.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Stop scrolling
+                    document.body.style.overflow = 'hidden';
                 });
             });
 
             closeBtn.addEventListener('click', () => {
                 lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Re-enable scroll
+                document.body.style.overflow = 'auto';
             });
 
             nextBtn.addEventListener('click', () => {
@@ -309,7 +323,6 @@
                 showLightboxImage(currentImageIdx - 1);
             });
 
-            // Close lightbox on clicking backdrop
             lightbox.addEventListener('click', (e) => {
                 if (e.target === lightbox) {
                     lightbox.classList.remove('active');
@@ -317,7 +330,6 @@
                 }
             });
 
-            // Close lightbox on ESC, navigate with arrow keys
             document.addEventListener('keydown', (e) => {
                 if (lightbox.classList.contains('active')) {
                     if (e.key === 'Escape') {

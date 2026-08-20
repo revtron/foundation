@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shikshak Shakti Council | Confluence of Knowledge, Nature, & Technology</title>
     <meta name="description" content="Official website of the Shikshak Shakti Council. Empowering teachers, building resilient educators, and promoting smart pedagogy in rural and urban classrooms across India.">
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg.jpeg">
+    <link rel="icon" type="image/png" href="ssc.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Core Style Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,7 +27,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html#home" class="logo-container">
-                    <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="logo-img">
+                    <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="logo-img">
                     <div class="logo-text">
                         <span class="brand-name">SHIKSHAK SHAKTI</span>
                         <span class="brand-subtitle">COUNCIL</span>
@@ -35,12 +43,12 @@
                     <li><a href="index.html#involve" class="nav-link">Get Involved</a></li>
                     <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                     <li class="header-cta-mobile" style="display: none;">
-                        <a href="index.html#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Join the Council</a>
+                        <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
                     </li>
                 </ul>
 
                 <div class="header-cta">
-                    <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
+                    <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-user-plus"></i> Join the Council</a>
                 </div>
 
                 <button class="hamburger" aria-label="Toggle navigation menu">
@@ -54,6 +62,9 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
+        <div class="ambient-orb ambient-orb-1"></div>
+        <div class="ambient-orb ambient-orb-2"></div>
         <!-- Slideshow Background -->
         <div class="hero-slides">
             <div class="hero-slide active" style="background-image: url('IMG-20260814-WA0039.jpg');"></div>
@@ -61,6 +72,7 @@
             <div class="hero-slide" style="background-image: url('IMG-20260814-WA0038.jpg');"></div>
         </div>
         <div class="hero-overlay"></div>
+        
         <div class="container">
             <div class="hero-content">
                 <div class="hero-tag">
@@ -68,17 +80,18 @@
                     <span>Smart Pedagogy, Resilient Educators</span>
                 </div>
                 <h1 class="hero-title serif-font">Empowering the <span>Teachers</span> Who Shape India's Future</h1>
-                <p class="hero-description">A confluence of knowledge, nature, and technology. In active collaboration with <a href="https://teachpad.in/" target="_blank" style="color: #0165fd; font-weight: 700; text-decoration: underline;">Teachpad</a>, Shikshak Shakti Council builds pedagogical strength and professional resilience among educators to transform classroom learning at the grassroots.</p>
+                <p class="hero-description">A confluence of knowledge, nature, and technology. In active collaboration with <a href="https://teachpad.in/" target="_blank" style="color: var(--clr-emerald-400); font-weight: 700; text-decoration: underline;">Teachpad</a>, Shikshak Shakti Council builds pedagogical strength and professional resilience among educators to transform classroom learning at the grassroots.</p>
                 <div class="hero-actions">
                     <a href="https://calendly.com/shikshak-shakti-council/counselling" target="_blank" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book 1:1 Counselling</a>
-                    <a href="index.html#contact" class="btn btn-outline">Explore Partnership</a>
+                    <a href="index.html#contact" class="btn btn-outline"><i class="fas fa-handshake"></i> Explore Partnership</a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
+        
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About Section">
             <span>Scroll Down</span>
             <i class="fas fa-chevron-down"></i>
-        </div>
+        </a>
     </section>
 
     <!-- About Mission Section -->
@@ -86,10 +99,10 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <span class="section-tag">Who We Are</span>
+                    <span class="section-tag"><i class="fas fa-heart"></i> Who We Are</span>
                     <h2 class="section-title serif-font">Empowering Educators, Elevating Classrooms</h2>
                     <h3>Restoring teaching dignity and improving classroom learning.</h3>
-                    <p>Founded by visionary educational leader **Hariom Prasad Chourasia** alongside **Sarabjeet Kaur**, the Shikshak Shakti Council is built on the belief that teachers are the primary catalyst of social change. We work directly with primary teachers, educational experts, and public school networks to elevate teaching practices, classroom quality, and educator confidence.</p>
+                    <p>Founded by visionary educational leader <strong>Hariom Prasad Chourasia</strong> alongside <strong>Sarabjeet Kaur</strong>, the Shikshak Shakti Council is built on the belief that teachers are the primary catalyst of social change. We work directly with primary teachers, educational experts, and public school networks to elevate teaching practices, classroom quality, and educator confidence.</p>
                     <p>By shifting the focus from passive listening to interactive engagement, we help teachers adapt to modern needs without losing the timeless touch of direct mentoring and empathy.</p>
                     
                     <div class="about-features">
@@ -134,22 +147,22 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <i class="fas fa-users stat-icon"></i>
-                    <span class="stat-number" data-target="10000">0</span>
+                    <span class="stat-number" data-target="10000">10,000+</span>
                     <span class="stat-label">Teachers Empowered</span>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-person-chalkboard stat-icon"></i>
-                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-number" data-target="500">500+</span>
                     <span class="stat-label">Workshops Conducted</span>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-graduation-cap stat-icon"></i>
-                    <span class="stat-number" data-target="50000">0</span>
+                    <span class="stat-number" data-target="50000">50,000+</span>
                     <span class="stat-label">Students Impacted</span>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-map-location-dot stat-icon"></i>
-                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-number" data-target="15">15+</span>
                     <span class="stat-label">Regional Chapters</span>
                 </div>
             </div>
@@ -160,7 +173,7 @@
     <section id="initiatives" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Key Initiatives</span>
+                <span class="section-tag"><i class="fas fa-lightbulb"></i> Key Initiatives</span>
                 <h2 class="section-title serif-font">Transforming Educational Landscape</h2>
                 <p class="section-desc">Our focused programs celebrate innovative teachers, build professional skills, and create strong networks to drive change across schools in India.</p>
             </div>
@@ -213,7 +226,7 @@
     <section id="chaupal-slider" class="section chaupal-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Community & Exchange</span>
+                <span class="section-tag"><i class="fas fa-comments"></i> Community & Exchange</span>
                 <h2 class="section-title serif-font">Shikshak Chaupal Forums</h2>
                 <p class="section-desc">Witness our grassroots teacher circles in action. These looping highlights showcase actual classroom collaborations, dialogs, and sharing sessions across school districts.</p>
             </div>
@@ -287,43 +300,43 @@
     </section>
 
     <!-- Philosophy Section -->
-    <section id="philosophy" class="section" style="background-color: var(--bg-light);">
+    <section id="philosophy" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Our Vision</span>
+                <span class="section-tag"><i class="fas fa-compass"></i> Our Vision</span>
                 <h2 class="section-title serif-font">Confluence of Knowledge, Nature, & Technology</h2>
                 <p class="section-desc">We combine traditional teaching wisdom with active natural spaces and smart digital aids to create a complete, balanced classroom experience.</p>
             </div>
 
             <!-- Innovations Banner -->
-            <div class="innovation-banner" style="margin-top: 0;">
+            <div class="innovation-banner">
                 <div class="innovation-left">
                     <h4>The Philosophy</h4>
                     <h3 class="serif-font">Three Pillars of Teaching Power</h3>
                     <p>True educational impact occurs when teachers learn to balance internal intellect (Knowledge) with open, stress-free environments (Nature) and modern interactive devices (Technology).</p>
-                    <a href="#contact" class="btn btn-outline" style="border-color: var(--accent-yellow); color: var(--accent-yellow);">Read Our Manifesto</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-book-open"></i> Read Our Manifesto</a>
                 </div>
                 <div class="innovation-right">
                     <div class="innovation-steps">
                         <div class="step-item">
-                            <div class="step-num"><i class="fas fa-book-open" style="font-size: 0.95rem;"></i></div>
+                            <div class="step-num"><i class="fas fa-book-open"></i></div>
                             <div class="step-text">
                                 <h5>Knowledge (ज्ञान)</h5>
                                 <p>Deep understanding of concept sequences and child psychology. Empowering teachers with comprehensive lesson plans and clear curriculum objectives.</p>
                             </div>
                         </div>
                         <div class="step-item">
-                            <div class="step-num"><i class="fas fa-tree" style="font-size: 0.95rem;"></i></div>
+                            <div class="step-num"><i class="fas fa-tree"></i></div>
                             <div class="step-text">
                                 <h5>Nature (प्रकृति)</h5>
                                 <p>Using natural settings, open air, and hands-on activities. Connecting education directly to children's immediate physical surroundings for real-world relevance.</p>
                             </div>
                         </div>
                         <div class="step-item">
-                            <div class="step-num"><i class="fas fa-laptop" style="font-size: 0.95rem;"></i></div>
+                            <div class="step-num"><i class="fas fa-laptop"></i></div>
                             <div class="step-text">
                                 <h5>Technology (तकनीकी)</h5>
-                                <p>Integrating digital companion apps in active collaboration with <a href="https://teachpad.in/" target="_blank" style="color: #0165fd; font-weight: 700; text-decoration: underline;">Teachpad</a> to make learning visual, trackable, and scalable across school networks.</p>
+                                <p>Integrating digital companion apps in active collaboration with <a href="https://teachpad.in/" target="_blank" style="color: var(--clr-emerald-400); font-weight: 700; text-decoration: underline;">Teachpad</a> to make learning visual, trackable, and scalable across school networks.</p>
                             </div>
                         </div>
                     </div>
@@ -333,10 +346,10 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="section" style="background-color: var(--bg-white);">
+    <section id="gallery" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Gallery</span>
+                <span class="section-tag"><i class="fas fa-camera"></i> Gallery</span>
                 <h2 class="section-title serif-font">Stories from the Classrooms</h2>
                 <p class="section-desc">Witness Shikshak Shakti Council's programs in action across schools and outdoor study groups.</p>
             </div>
@@ -399,7 +412,7 @@
     <section id="involve" class="cta-section section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Get Involved</span>
+                <span class="section-tag"><i class="fas fa-hand-holding-heart"></i> Get Involved</span>
                 <h2 class="section-title serif-font">Help Us Empower India's Teachers</h2>
                 <p class="section-desc">Join our growing ecosystem as a school partner, volunteer trainer, or strategic supporter.</p>
             </div>
@@ -412,7 +425,7 @@
                     </div>
                     <h3>School Partnerships</h3>
                     <p>Introduce the Shikshak Shakti pedagogy frameworks and Teacher Training modules to your school network. Lift learning outcomes and improve classroom management strategies.</p>
-                    <a href="index.html#contact" class="btn btn-primary" style="align-self: flex-start;">Register Your School</a>
+                    <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Register Your School</a>
                 </div>
 
                 <!-- Volunteer Box -->
@@ -422,7 +435,7 @@
                     </div>
                     <h3>Train & Volunteer</h3>
                     <p>Are you an experienced academician, technical trainer, or subject matter expert? Join us to lead regional teacher workshops and develop active teaching learning materials (TLMs).</p>
-                    <a href="index.html#contact" class="btn btn-secondary" style="align-self: flex-start;">Apply as a Trainer</a>
+                    <a href="index.html#contact" class="btn btn-secondary"><i class="fas fa-user-check"></i> Apply as a Trainer</a>
                 </div>
 
                 <!-- 1:1 Counselling Box -->
@@ -432,7 +445,7 @@
                     </div>
                     <h3>1:1 Counselling</h3>
                     <p>Connect with our expert educators for a personal, one-on-one session to resolve teaching hurdles, lesson planning concerns, or school deployment queries.</p>
-                    <a href="https://calendly.com/shikshak-shakti-council/counselling" target="_blank" class="btn btn-secondary" style="align-self: flex-start; background-color: var(--primary-blue-green);">Book Calendly Session</a>
+                    <a href="https://calendly.com/shikshak-shakti-council/counselling" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, var(--clr-amber-500), var(--clr-amber-400)); border: none; color: var(--clr-slate-950); font-weight: 800;"><i class="fas fa-calendar-check"></i> Book Calendly Session</a>
                 </div>
             </div>
         </div>
@@ -508,7 +521,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="subject" class="form-label">Inquiry Subject *</label>
-                                <select id="subject" class="form-control" required style="-webkit-appearance: none; -moz-appearance: none; appearance: none;">
+                                <select id="subject" class="form-control" required>
                                     <option value="volunteering">Volunteer Training</option>
                                     <option value="press">Press & Media Desk</option>
                                     <option value="other">General Query</option>
@@ -535,7 +548,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="org-type" class="form-label">Organization Type *</label>
-                                <select id="org-type" class="form-control" required style="-webkit-appearance: none; -moz-appearance: none; appearance: none;">
+                                <select id="org-type" class="form-control" required>
                                     <option value="school-chain">School / School Chain</option>
                                     <option value="ngo">NGO / Non-Profit</option>
                                     <option value="corporate">Corporate CSR Partner</option>
@@ -563,7 +576,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="collab-area" class="form-label">Area of Collaboration *</label>
-                                <select id="collab-area" class="form-control" required style="-webkit-appearance: none; -moz-appearance: none; appearance: none;">
+                                <select id="collab-area" class="form-control" required>
                                     <option value="pedagogy-adoption">Smart Pedagogy Integration</option>
                                     <option value="funding">CSR Funding & Sponsorship</option>
                                     <option value="teacher-training">Teacher Training Programs</option>
@@ -587,56 +600,57 @@
     </section>
 
     <!-- Testimonials / Success Stories Section -->
-    <section class="section testimonials-section" style="background-color: var(--bg-light); border-top: 1px solid rgba(16, 185, 129, 0.1);">
+    <section class="section testimonials-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Success Stories</span>
+                <span class="section-tag"><i class="fas fa-star"></i> Success Stories</span>
                 <h2 class="section-title serif-font">What Educators & Partners Say</h2>
                 <p class="section-desc">Real feedback from teachers, school principals, and CSR partners who have transformed their pedagogy with the Council.</p>
             </div>
-            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+            
+            <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card" style="background: var(--bg-white); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; border: 1px solid rgba(16, 185, 129, 0.08);">
-                    <div class="stars" style="color: var(--accent-yellow); margin-bottom: 16px; font-size: 0.9rem;">
+                <div class="testimonial-card">
+                    <div class="stars" style="color: var(--clr-amber-500); margin-bottom: 16px; font-size: 0.9rem;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 24px; flex-grow: 1;">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; font-style: italic; margin-bottom: 24px; flex-grow: 1;">
                         "The Smart Pedagogy workshops completely shifted how I teach math. My students now look forward to using natural materials to map concepts instead of just memorizing equations."
                     </p>
                     <div class="author" style="display: flex; align-items: center; gap: 12px;">
                         <div class="author-info">
-                            <h4 style="font-size: 1rem; color: var(--text-dark); font-weight: 700;">Suman Rawat</h4>
-                            <p style="font-size: 0.8rem; color: var(--accent-mint); font-weight: 600;">Primary Teacher, Noida Public School</p>
+                            <h4 style="font-size: 1rem; color: var(--clr-slate-900); font-weight: 700;">Suman Rawat</h4>
+                            <p style="font-size: 0.8rem; color: var(--clr-emerald-600); font-weight: 700;">Primary Teacher, Noida Public School</p>
                         </div>
                     </div>
                 </div>
                 <!-- Testimonial 2 -->
-                <div class="testimonial-card" style="background: var(--bg-white); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; border: 1px solid rgba(16, 185, 129, 0.08);">
-                    <div class="stars" style="color: var(--accent-yellow); margin-bottom: 16px; font-size: 0.9rem;">
+                <div class="testimonial-card">
+                    <div class="stars" style="color: var(--clr-amber-500); margin-bottom: 16px; font-size: 0.9rem;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 24px; flex-grow: 1;">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; font-style: italic; margin-bottom: 24px; flex-grow: 1;">
                         "Partnering with the Council allowed us to extend our CSR footprint effectively. Their audits are transparent, and their teacher enablement models deliver tangible classroom outcomes."
                     </p>
                     <div class="author" style="display: flex; align-items: center; gap: 12px;">
                         <div class="author-info">
-                            <h4 style="font-size: 1rem; color: var(--text-dark); font-weight: 700;">Dr. Rajesh K.</h4>
-                            <p style="font-size: 0.8rem; color: var(--accent-mint); font-weight: 600;">Director of CSR, Tech-Ed Global</p>
+                            <h4 style="font-size: 1rem; color: var(--clr-slate-900); font-weight: 700;">Dr. Rajesh K.</h4>
+                            <p style="font-size: 0.8rem; color: var(--clr-emerald-600); font-weight: 700;">Director of CSR, Tech-Ed Global</p>
                         </div>
                     </div>
                 </div>
                 <!-- Testimonial 3 -->
-                <div class="testimonial-card" style="background: var(--bg-white); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; border: 1px solid rgba(16, 185, 129, 0.08);">
-                    <div class="stars" style="color: var(--accent-yellow); margin-bottom: 16px; font-size: 0.9rem;">
+                <div class="testimonial-card">
+                    <div class="stars" style="color: var(--clr-amber-500); margin-bottom: 16px; font-size: 0.9rem;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 24px; flex-grow: 1;">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; font-style: italic; margin-bottom: 24px; flex-grow: 1;">
                         "Shikshak Chaupal has become a safe space for us to share teaching hurdles. It is incredibly empowering to collaborate with peers and feel respected as professionals."
                     </p>
                     <div class="author" style="display: flex; align-items: center; gap: 12px;">
                         <div class="author-info">
-                            <h4 style="font-size: 1rem; color: var(--text-dark); font-weight: 700;">Harish Chourasia</h4>
-                            <p style="font-size: 0.8rem; color: var(--accent-mint); font-weight: 600;">Math Educator, Gurgaon Chapter</p>
+                            <h4 style="font-size: 1rem; color: var(--clr-slate-900); font-weight: 700;">Harish Chourasia</h4>
+                            <p style="font-size: 0.8rem; color: var(--clr-emerald-600); font-weight: 700;">Math Educator, Gurgaon Chapter</p>
                         </div>
                     </div>
                 </div>
@@ -645,42 +659,42 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section faq-section" style="background-color: var(--bg-white); border-top: 1px solid rgba(16, 185, 129, 0.1);">
+    <section class="section faq-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Frequently Asked Questions</span>
+                <span class="section-tag"><i class="fas fa-circle-question"></i> Frequently Asked Questions</span>
                 <h2 class="section-title serif-font">Got Questions? We Have Answers</h2>
                 <p class="section-desc">Find quick resolutions about school affiliations, counselor sessions, volunteering opportunities, and CSR collaborations.</p>
             </div>
             
-            <div class="faq-grid" style="max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 16px;">
+            <div class="faq-grid">
                 <!-- FAQ Item 1 -->
-                <div class="faq-item" style="border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-sm); overflow: hidden; transition: var(--transition);">
-                    <button class="faq-question" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: var(--bg-light); border: none; font-size: 1.05rem; font-weight: 600; color: var(--text-dark); text-align: left; cursor: pointer;">
+                <div class="faq-item">
+                    <button class="faq-question">
                         <span>How does a school affiliate with the Council?</span>
-                        <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--accent-mint); transition: var(--transition);"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
-                    <div class="faq-answer" style="display: none; padding: 20px 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; background: var(--bg-white); border-top: 1px solid rgba(16, 185, 129, 0.08);">
+                    <div class="faq-answer">
                         <p>Schools can partner by filling out the Organization Collaboration Form under our "Contact" section. Our regional chapter leaders will then reach out to review your syllabus and schedule custom Smart Pedagogy workshops for your teaching staff.</p>
                     </div>
                 </div>
                 <!-- FAQ Item 2 -->
-                <div class="faq-item" style="border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-sm); overflow: hidden; transition: var(--transition);">
-                    <button class="faq-question" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: var(--bg-light); border: none; font-size: 1.05rem; font-weight: 600; color: var(--text-dark); text-align: left; cursor: pointer;">
+                <div class="faq-item">
+                    <button class="faq-question">
                         <span>Is the 1:1 Pedagogical Counselling session free?</span>
-                        <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--accent-mint); transition: var(--transition);"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
-                    <div class="faq-answer" style="display: none; padding: 20px 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; background: var(--bg-white); border-top: 1px solid rgba(16, 185, 129, 0.08);">
+                    <div class="faq-answer">
                         <p>Yes, all 1:1 counselling sessions booked via our Calendly integration are entirely free of charge. This program is funded through our corporate CSR alliances to ensure educators have access to high-quality pedagogical support.</p>
                     </div>
                 </div>
                 <!-- FAQ Item 3 -->
-                <div class="faq-item" style="border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-sm); overflow: hidden; transition: var(--transition);">
-                    <button class="faq-question" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: var(--bg-light); border: none; font-size: 1.05rem; font-weight: 600; color: var(--text-dark); text-align: left; cursor: pointer;">
+                <div class="faq-item">
+                    <button class="faq-question">
                         <span>How can an organization sponsor a chapter via CSR?</span>
-                        <i class="fas fa-plus" style="font-size: 0.9rem; color: var(--accent-mint); transition: var(--transition);"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
-                    <div class="faq-answer" style="display: none; padding: 20px 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; background: var(--bg-white); border-top: 1px solid rgba(16, 185, 129, 0.08);">
+                    <div class="faq-answer">
                         <p>Corporate partners can submit proposals using the "Organization / CSR" tab on our contact form. We conduct active audits and provide detailed impact metrics showing teacher empowerment rates and student conceptual improvements for tax exemptions and transparency compliance.</p>
                     </div>
                 </div>
@@ -689,21 +703,42 @@
     </section>
 
     <!-- Partners & Alliances Section -->
-    <section class="section partners-section" style="background-color: var(--bg-white); padding: 60px 0; border-top: 1px solid rgba(16, 185, 129, 0.1);">
+    <section class="section partners-section">
         <div class="container">
             <div class="section-header" style="margin-bottom: 30px;">
-                <span class="section-tag" style="margin-bottom: 8px;">Our Alliances</span>
-                <h3 class="serif-font" style="font-size: 1.8rem; color: var(--primary-blue-green); text-align: center; font-weight: 700;">Supported by Leading Organizations</h3>
+                <span class="section-tag" style="margin-bottom: 8px;"><i class="fas fa-building-columns"></i> Our Alliances</span>
+                <h3 class="serif-font" style="font-size: 1.8rem; color: var(--clr-slate-900); text-align: center; font-weight: 800;">Supported by Leading Organizations</h3>
             </div>
-            <div class="partners-logos" style="display: flex; justify-content: space-around; align-items: center; gap: 30px; flex-wrap: wrap; opacity: 0.85;">
-                <a href="https://teachpad.in/" target="_blank" class="partner-logo-item" style="transition: var(--transition); display: flex; align-items: center; gap: 10px;">
-                    <img src="https://teachpad.in/assets/teachpad-logo.png" alt="Teachpad Logo" style="height: 24px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));">
-                    <span style="font-size: 0.75rem; font-weight: 700; color: #0165fd; background: rgba(1, 101, 253, 0.08); padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(1, 101, 253, 0.15);">AI Technology Partner</span>
+        <div class="alliances-marquee-wrapper">
+            <div class="alliances-marquee-track">
+                <!-- Track Set 1 -->
+                <a href="https://teachpad.in/" target="_blank" class="partner-logo-item">
+                    <img src="https://teachpad.in/assets/teachpad-logo.png" alt="Teachpad Logo">
+                    <span>AI Technology Partner</span>
                 </a>
-                <div class="partner-logo-item" style="font-weight: 700; font-size: 1.2rem; color: #475569; font-family: 'Playfair Display', serif;"><i class="fas fa-university" style="margin-right: 6px; color: var(--accent-mint);"></i> National Education Trust</div>
-                <div class="partner-logo-item" style="font-weight: 700; font-size: 1.2rem; color: #475569; font-family: 'Playfair Display', serif;"><i class="fas fa-leaf" style="margin-right: 6px; color: var(--accent-mint);"></i> Nature First Foundation</div>
-                <div class="partner-logo-item" style="font-weight: 700; font-size: 1.2rem; color: #475569; font-family: 'Playfair Display', serif;"><i class="fas fa-hands-helping" style="margin-right: 6px; color: var(--accent-mint);"></i> CSR Alliances India</div>
+                <div class="partner-logo-item"><i class="fas fa-university"></i> National Education Trust</div>
+                <div class="partner-logo-item"><i class="fas fa-leaf"></i> Nature First Foundation</div>
+                <div class="partner-logo-item"><i class="fas fa-hands-helping"></i> CSR Alliances India</div>
+
+                <!-- Track Set 2 -->
+                <a href="https://teachpad.in/" target="_blank" class="partner-logo-item">
+                    <img src="https://teachpad.in/assets/teachpad-logo.png" alt="Teachpad Logo">
+                    <span>AI Technology Partner</span>
+                </a>
+                <div class="partner-logo-item"><i class="fas fa-university"></i> National Education Trust</div>
+                <div class="partner-logo-item"><i class="fas fa-leaf"></i> Nature First Foundation</div>
+                <div class="partner-logo-item"><i class="fas fa-hands-helping"></i> CSR Alliances India</div>
+
+                <!-- Track Set 3 -->
+                <a href="https://teachpad.in/" target="_blank" class="partner-logo-item">
+                    <img src="https://teachpad.in/assets/teachpad-logo.png" alt="Teachpad Logo">
+                    <span>AI Technology Partner</span>
+                </a>
+                <div class="partner-logo-item"><i class="fas fa-university"></i> National Education Trust</div>
+                <div class="partner-logo-item"><i class="fas fa-leaf"></i> Nature First Foundation</div>
+                <div class="partner-logo-item"><i class="fas fa-hands-helping"></i> CSR Alliances India</div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -713,7 +748,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="footer-logo-container">
-                        <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
+                        <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
                         <div class="logo-text">
                             <span class="footer-brand-name">SHIKSHAK SHAKTI</span>
                             <span class="footer-brand-subtitle">COUNCIL</span>
@@ -747,13 +782,13 @@
                     <p>Join our newsletter to receive training schedules and field logs from our council chapters.</p>
                     <form class="newsletter-form">
                         <input type="email" class="form-control" placeholder="Email Address" required aria-label="Email Address">
-                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-chevron-right"></i></button>
+                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--accent-mint); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
+                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--clr-emerald-400); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
                 <div class="footer-bottom-links">
                     <a href="#contact">Privacy Guidelines</a>
                     <a href="#contact">Terms of Engagement</a>
@@ -768,6 +803,10 @@
         <span>1:1 Counselling</span>
     </a>
 
+    <!-- Three.js 3D WebGL Library & GSAP Animation Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Core Interactions Logic -->
     <script src="script.js"></script>
 </body>

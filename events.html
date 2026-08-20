@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events & Workshops | Shikshak Shakti Council</title>
     <meta name="description" content="Explore upcoming teacher training programs, summits, and local chapters of the Shikshak Shakti Council. Join us to elevate pedagogy.">
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg.jpeg">
+    <link rel="icon" type="image/png" href="ssc.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Core Style Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,7 +27,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html#home" class="logo-container">
-                    <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="logo-img">
+                    <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="logo-img">
                     <div class="logo-text">
                         <span class="brand-name">SHIKSHAK SHAKTI</span>
                         <span class="brand-subtitle">COUNCIL</span>
@@ -35,12 +43,12 @@
                     <li><a href="index.html#involve" class="nav-link">Get Involved</a></li>
                     <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                     <li class="header-cta-mobile" style="display: none;">
-                        <a href="index.html#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Join the Council</a>
+                        <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
                     </li>
                 </ul>
 
                 <div class="header-cta">
-                    <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
+                    <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-user-plus"></i> Join the Council</a>
                 </div>
 
                 <button class="hamburger" aria-label="Toggle navigation menu">
@@ -54,6 +62,7 @@
 
     <!-- Page Header -->
     <section class="page-header">
+        <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
         <div class="container">
             <h1 class="page-title serif-font">Events & Workshops</h1>
             <p class="page-subtitle">Participate in our national summits, local training programs, and collaborative teaching circles.</p>
@@ -85,7 +94,7 @@
                         </div>
                         <h3>Teachers' Day Felicitation & National Summit</h3>
                         <p>Join us as we celebrate outstanding grassroots educators across the country. The summit includes pedagogy research presentations, child psychology panels, and educator felicitation ceremonies.</p>
-                        <a href="#register" class="btn btn-primary" style="margin-top: auto; font-size: 0.9rem; padding: 10px 20px;">Register to Attend</a>
+                        <a href="#register" class="btn btn-primary" style="margin-top: auto;"><i class="fas fa-ticket-alt"></i> Register to Attend</a>
                     </div>
                 </div>
 
@@ -102,7 +111,7 @@
                         </div>
                         <h3>Smart Pedagogy Workshop: Math & Science</h3>
                         <p>An interactive, hands-on workshop focused on developing offline tactile teaching kits. Learn how to convert complex textbook concepts into visual and natural playsets for students.</p>
-                        <a href="#register" class="btn btn-primary" style="margin-top: auto; font-size: 0.9rem; padding: 10px 20px;">RSVP Workshop</a>
+                        <a href="#register" class="btn btn-primary" style="margin-top: auto;"><i class="fas fa-calendar-plus"></i> RSVP Workshop</a>
                     </div>
                 </div>
 
@@ -119,7 +128,7 @@
                         </div>
                         <h3>Shikshak Chaupal: Chapter Circle Meeting</h3>
                         <p>Our Vasant Kunj discussion circle addressed teacher resilience, active student engagement techniques, and integrating offline multimedia tools in under-resourced schools.</p>
-                        <a href="#register" class="btn btn-outline" style="margin-top: auto; font-size: 0.9rem; padding: 10px 20px; border-color: var(--primary-blue-green); color: var(--primary-blue-green);">View Summary</a>
+                        <a href="#register" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-file-lines"></i> View Summary</a>
                     </div>
                 </div>
 
@@ -136,7 +145,7 @@
                         </div>
                         <h3>Cooperative Outdoor Learning Seminar</h3>
                         <p>A regional training seminar detailing methods for conducting doorstep study circles in outdoor neighborhood areas, balancing academic concept mapping with physical activities.</p>
-                        <a href="#register" class="btn btn-outline" style="margin-top: auto; font-size: 0.9rem; padding: 10px 20px; border-color: var(--primary-blue-green); color: var(--primary-blue-green);">View Summary</a>
+                        <a href="#register" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-file-lines"></i> View Summary</a>
                     </div>
                 </div>
             </div>
@@ -144,27 +153,27 @@
     </section>
 
     <!-- RSVP & Calendly Booking Section -->
-    <section id="register" class="section" style="background-color: var(--bg-white);">
+    <section id="register" class="section">
         <div class="container">
             <div class="contact-grid">
                 <!-- Calendly 1:1 Booking Info Box -->
-                <div class="contact-info-card" style="background: linear-gradient(135deg, var(--primary-blue-green) 0%, var(--primary-blue) 100%);">
+                <div class="contact-info-card" style="background: linear-gradient(135deg, var(--clr-slate-950) 0%, var(--clr-slate-900) 100%);">
                     <div class="contact-info-top">
                         <h3 class="serif-font" style="color: var(--bg-white);">1:1 Pedagogical Counselling</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); margin-bottom: 30px;">
+                        <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 30px;">
                             Need help mapping your school's curriculum, addressing pedagogical hurdles, or understanding chapter integration? Book a private 1:1 session with a counselor.
                         </p>
                         
                         <div class="contact-detail-list">
                             <div class="contact-detail-item">
-                                <i class="fas fa-clock" style="color: var(--accent-yellow);"></i>
+                                <i class="fas fa-clock" style="color: var(--clr-amber-400);"></i>
                                 <div>
                                     <h5 style="color: var(--bg-white);">Duration</h5>
                                     <p style="color: rgba(255, 255, 255, 0.75);">30-45 Minute Private Session</p>
                                 </div>
                             </div>
                             <div class="contact-detail-item">
-                                <i class="fas fa-video" style="color: var(--accent-yellow);"></i>
+                                <i class="fas fa-video" style="color: var(--clr-amber-400);"></i>
                                 <div>
                                     <h5 style="color: var(--bg-white);">Mode</h5>
                                     <p style="color: rgba(255, 255, 255, 0.75);">Virtual (Google Meet / Zoom)</p>
@@ -173,14 +182,14 @@
                         </div>
                     </div>
 
-                    <a href="https://calendly.com/shikshak-shakti-council/counselling" target="_blank" class="btn btn-primary" style="margin-top: 40px; background-color: var(--accent-yellow); border-color: var(--accent-yellow); color: var(--text-dark); width: 100%;">
+                    <a href="https://calendly.com/shikshak-shakti-council/counselling" target="_blank" class="btn btn-primary" style="margin-top: 40px; background: linear-gradient(135deg, var(--clr-amber-500), var(--clr-amber-400)); border: none; color: var(--clr-slate-950); font-weight: 800; width: 100%;">
                         <i class="fas fa-calendar-check"></i> Book via Calendly
                     </a>
                 </div>
 
                 <!-- Registration / Collaboration Form -->
                 <div class="contact-form-card">
-                    <h3 class="serif-font" style="margin-bottom: 10px; color: var(--primary-blue-green);">Event Registration</h3>
+                    <h3 class="serif-font" style="margin-bottom: 10px; color: var(--clr-slate-900);">Event Registration</h3>
                     <p style="color: var(--text-muted); margin-bottom: 24px;">Please specify which workshop/summit you want to attend and register your profile.</p>
                     
                     <form class="contact-form" id="event-register-form" novalidate>
@@ -202,7 +211,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="reg-event" class="form-label">Select Event *</label>
-                                <select id="reg-event" class="form-control" required style="-webkit-appearance: none; -moz-appearance: none; appearance: none;">
+                                <select id="reg-event" class="form-control" required>
                                     <option value="summit">Teachers' Day Felicitation Summit (Sept 5)</option>
                                     <option value="workshop">Smart Pedagogy Workshop (Sept 18)</option>
                                 </select>
@@ -229,7 +238,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="footer-logo-container">
-                        <img src="logo.jpg.jpeg" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
+                        <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
                         <div class="logo-text">
                             <span class="footer-brand-name">SHIKSHAK SHAKTI</span>
                             <span class="footer-brand-subtitle">COUNCIL</span>
@@ -263,13 +272,13 @@
                     <p>Join our newsletter to receive training schedules and field logs from our council chapters.</p>
                     <form class="newsletter-form">
                         <input type="email" class="form-control" placeholder="Email Address" required aria-label="Email Address">
-                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-chevron-right"></i></button>
+                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--accent-mint); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
+                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--clr-emerald-400); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
                 <div class="footer-bottom-links">
                     <a href="index.html#contact">Privacy Guidelines</a>
                     <a href="index.html#contact">Terms of Engagement</a>
@@ -284,6 +293,10 @@
         <span>1:1 Counselling</span>
     </a>
 
+    <!-- Three.js 3D WebGL Library & GSAP Animation Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Core Interactions Logic -->
     <script src="script.js"></script>
     <script>
@@ -313,7 +326,7 @@
                 });
             });
 
-            // Event registration Mock
+            // Event Registration Form
             const regForm = document.getElementById('event-register-form');
             if (regForm) {
                 regForm.addEventListener('submit', (e) => {
@@ -331,7 +344,7 @@
                     const originalText = submitBtn.innerHTML;
 
                     submitBtn.disabled = true;
-                    submitBtn.style.backgroundColor = 'var(--accent-mint)';
+                    submitBtn.style.backgroundColor = 'var(--clr-emerald-500)';
                     submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Registration Complete!';
 
                     setTimeout(() => {
