@@ -6,10 +6,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. THREE.JS 3D WEBGL ENGINE
+    // 1. THREE.JS 3D WEBGL ENGINE (OPTIMIZED FOR LOW-END ANDROID DEVICES)
     const initThreeJS = () => {
         const canvas = document.getElementById('hero-3d-canvas');
         if (!canvas || typeof THREE === 'undefined') return;
+
+        const isMobile = window.innerWidth < 768;
+        const isLowEnd = isMobile || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(
@@ -23,13 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const renderer = new THREE.WebGLRenderer({
             canvas: canvas,
             alpha: true,
-            antialias: true
+            antialias: !isLowEnd,
+            powerPreference: 'low-power'
         });
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setPixelRatio(isLowEnd ? 1 : Math.min(window.devicePixelRatio, 2));
 
-        // 3D Particle Mesh System
-        const particleCount = 800;
+        // 3D Particle Mesh System (Adaptive particle count for low-end Androids)
+        const particleCount = isLowEnd ? 240 : 750;
         const geometry = new THREE.BufferGeometry();
         const positions = new Float32Array(particleCount * 3);
         const colors = new Float32Array(particleCount * 3);
@@ -129,9 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
             renderer.setSize(window.innerWidth, window.innerHeight);
         }, false);
 
+        let isCanvasVisible = true;
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    isCanvasVisible = entry.isIntersecting;
+                });
+            }, { threshold: 0.01 });
+            observer.observe(canvas);
+        }
+
         const clock = new THREE.Clock();
         const animate = () => {
             requestAnimationFrame(animate);
+            if (!isCanvasVisible) return;
 
             const elapsedTime = clock.getElapsedTime();
 
@@ -284,10 +299,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. Mobile Navigation Drawer & Hamburger
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
 
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
+        const closeMobileMenu = () => {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            const spans = hamburger.querySelectorAll('span');
+            if (spans.length === 3) {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        };
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
             const isActive = navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', isActive);
@@ -300,18 +327,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-                const spans = hamburger.querySelectorAll('span');
-                if (spans.length === 3) {
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
-                }
-            });
+        // Close drawer when ANY link inside nav-menu is clicked
+        const menuLinks = navMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close drawer when clicking outside nav-menu
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMobileMenu();
+            }
         });
     }
 
@@ -619,10 +645,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // 17. Floating WhatsApp Button Auto-Injector
+    const initWhatsAppButton = () => {
+        if (document.querySelector('.floating-whatsapp-btn')) return;
+        const waBtn = document.createElement('a');
+        waBtn.href = 'https://wa.me/918800726212?text=Hello%20Shikshak%20Shakti%20Council%2C%20I%20would%20like%20to%20know%20more%20about%20your%20programs.';
+        waBtn.target = '_blank';
+        waBtn.className = 'floating-whatsapp-btn';
+        waBtn.setAttribute('aria-label', 'Chat with us on WhatsApp');
+        waBtn.innerHTML = '<i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i> <span>WhatsApp Us</span>';
+        document.body.appendChild(waBtn);
+    };
+
+    // 18. Cookie Consent Banner (DPDP Act / GDPR Compliance)
+    const initCookieBanner = () => {
+        if (localStorage.getItem('ssc_cookie_consent')) return;
+
+        const banner = document.createElement('div');
+        banner.className = 'cookie-banner';
+        banner.innerHTML = `
+            <div class="cookie-banner-content">
+                <p><strong><i class="fas fa-cookie-bite"></i> Cookie & Privacy Notice:</strong> We use cookies to enhance your experience, analyze site usage, and support our educator community under the DPDP Act. By clicking "Accept All", you consent to our privacy guidelines.</p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="accept-cookies-btn" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">Accept All</button>
+            </div>
+        `;
+        document.body.appendChild(banner);
+
+        document.getElementById('accept-cookies-btn').addEventListener('click', () => {
+            localStorage.setItem('ssc_cookie_consent', 'accepted');
+            banner.classList.add('hidden');
+            setTimeout(() => banner.remove(), 400);
+        });
+    };
+
     // INITIALIZE ADVANCED ANIMATION ENGINES
     initThreeJS();
     init3DTiltEffects();
     initMagneticButtons();
     initGSAPAnimations();
     initCustomCursor();
+    initWhatsAppButton();
+    initCookieBanner();
 });

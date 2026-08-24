@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers & Opportunities | Shikshak Shakti Council</title>
+    <meta name="description" content="Explore career opportunities at Shikshak Shakti Council. Join us to empower teachers, modernize pedagogy, and drive educational innovation across India.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="ssc.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Core Style Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header" class="header scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html#home" class="logo-container">
+                    <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="brand-name">SHIKSHAK SHAKTI</span>
+                        <span class="brand-subtitle">COUNCIL</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">Our Mission</a></li>
+                    <li><a href="index.html#initiatives" class="nav-link">Initiatives</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="careers.html" class="nav-link active">Careers</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="index.html#involve" class="nav-link">Get Involved</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li class="header-cta-mobile" style="display: none;">
+                        <a href="index.html#contact" class="btn btn-primary">Join the Council</a>
+                    </li>
+                </ul>
+
+                <div class="header-cta">
+                    <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-user-plus"></i> Join the Council</a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
+        <div class="container">
+            <h1 class="page-title serif-font">Careers at Shikshak Shakti</h1>
+            <p class="page-subtitle">Join a passionate movement dedicated to empowering educators, modernizing pedagogy, and transforming classrooms across India.</p>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-tag"><i class="fas fa-heart"></i> Our Culture</span>
+                <h2 class="serif-font">Why Work With Us?</h2>
+                <p class="section-subtitle">We build environments where educators, tech innovators, and researchers collaborate to solve real classroom challenges.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hands-holding-child"></i>
+                    </div>
+                    <h4>Grassroots Impact</h4>
+                    <p>Work directly with primary and secondary educators in urban centers and rural chapters to make tangible classroom change.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4>Modern EdTech Integration</h4>
+                    <p>Pioneer intelligent tools like Teachpad and interactive multimedia pedagogy that simplify lesson planning for teachers.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h4>Continuous Professional Growth</h4>
+                    <p>Access national pedagogy research, attend summits, and work closely with senior education reform leaders.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users-rays"></i>
+                    </div>
+                    <h4>Collaborative Community</h4>
+                    <p>Thrive in a supportive culture built on mutual respect, shared purpose, and a passion for lifelong learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section class="jobs-section section" style="background: var(--clr-slate-50);">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Current Openings</span>
+                <h2 class="serif-font">Explore Open Positions</h2>
+                <p class="section-subtitle">Find a role where your expertise and passion can drive meaningful educational outcomes.</p>
+            </div>
+
+            <!-- Category Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Roles</button>
+                <button class="filter-btn" data-filter="pedagogy">Pedagogy & Research</button>
+                <button class="filter-btn" data-filter="edtech">EdTech & Product</button>
+                <button class="filter-btn" data-filter="operations">Outreach & Operations</button>
+            </div>
+
+            <!-- Jobs Grid -->
+            <div class="jobs-grid">
+                <!-- Job Card 1 -->
+                <div class="job-card" data-category="pedagogy">
+                    <div class="job-header">
+                        <div class="job-title-group">
+                            <span class="job-department">Pedagogy & Research</span>
+                            <h3>Master Educator & Trainer</h3>
+                        </div>
+                        <div class="job-badges">
+                            <span class="job-badge featured">Featured</span>
+                            <span class="job-badge full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-meta-list">
+                        <div class="job-meta-item">
+                            <i class="fas fa-location-dot"></i> Noida / Hybrid
+                        </div>
+                        <div class="job-meta-item">
+                            <i class="fas fa-briefcase"></i> 4+ Years Experience
+                        </div>
+                    </div>
+
+                    <p class="job-description">
+                        Lead teacher-training workshops, design innovative curriculum frameworks, and mentor grassroots educators across Shikshak Chaupal chapters.
+                    </p>
+
+                    <div class="job-requirements">
+                        <h5>Key Requirements:</h5>
+                        <ul>
+                            <li>Strong foundation in child psychology and active pedagogy.</li>
+                            <li>Experience conducting interactive teacher workshops.</li>
+                            <li>Ability to design bilingual activity kits and lesson blueprints.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-card-action">
+                        <a href="#apply-section" class="btn btn-primary apply-role-btn" data-role="Master Educator & Trainer" style="width: 100%; text-align: center;">
+                            <i class="fas fa-paper-plane"></i> Apply for this Role
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card" data-category="edtech">
+                    <div class="job-header">
+                        <div class="job-title-group">
+                            <span class="job-department">EdTech & Product</span>
+                            <h3>EdTech Curriculum Specialist (Teachpad Integration)</h3>
+                        </div>
+                        <div class="job-badges">
+                            <span class="job-badge featured">Featured</span>
+                            <span class="job-badge full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-meta-list">
+                        <div class="job-meta-item">
+                            <i class="fas fa-location-dot"></i> Noida / Remote
+                        </div>
+                        <div class="job-meta-item">
+                            <i class="fas fa-briefcase"></i> 2+ Years Experience
+                        </div>
+                    </div>
+
+                    <p class="job-description">
+                        Drive the deployment and content curation for digital classroom tools, AI lesson assistants, and offline multimedia modules in partner schools.
+                    </p>
+
+                    <div class="job-requirements">
+                        <h5>Key Requirements:</h5>
+                        <ul>
+                            <li>Experience with instructional design and digital learning management.</li>
+                            <li>Familiarity with Teachpad tools or modern AI education platforms.</li>
+                            <li>Passionate about bridging technology with classroom reality.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-card-action">
+                        <a href="#apply-section" class="btn btn-primary apply-role-btn" data-role="EdTech Curriculum Specialist" style="width: 100%; text-align: center;">
+                            <i class="fas fa-paper-plane"></i> Apply for this Role
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card" data-category="operations">
+                    <div class="job-header">
+                        <div class="job-title-group">
+                            <span class="job-department">Outreach & Operations</span>
+                            <h3>Regional Chapter & Community Coordinator</h3>
+                        </div>
+                        <div class="job-badges">
+                            <span class="job-badge full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-meta-list">
+                        <div class="job-meta-item">
+                            <i class="fas fa-location-dot"></i> Noida / Field Travel
+                        </div>
+                        <div class="job-meta-item">
+                            <i class="fas fa-briefcase"></i> 2+ Years Experience
+                        </div>
+                    </div>
+
+                    <p class="job-description">
+                        Expand local educator discussion circles, coordinate regional summits, and build partnerships with school administrators and district officers.
+                    </p>
+
+                    <div class="job-requirements">
+                        <h5>Key Requirements:</h5>
+                        <ul>
+                            <li>Excellent communication and relationship-building skills.</li>
+                            <li>Prior experience in community management or educational field work.</li>
+                            <li>Willingness to travel for local chapter engagement.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-card-action">
+                        <a href="#apply-section" class="btn btn-primary apply-role-btn" data-role="Regional Chapter & Community Coordinator" style="width: 100%; text-align: center;">
+                            <i class="fas fa-paper-plane"></i> Apply for this Role
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-card" data-category="pedagogy">
+                    <div class="job-header">
+                        <div class="job-title-group">
+                            <span class="job-department">Pedagogy & Research</span>
+                            <h3>Curriculum Content Designer</h3>
+                        </div>
+                        <div class="job-badges">
+                            <span class="job-badge part-time">Part-Time / Contract</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-meta-list">
+                        <div class="job-meta-item">
+                            <i class="fas fa-location-dot"></i> Remote
+                        </div>
+                        <div class="job-meta-item">
+                            <i class="fas fa-briefcase"></i> 1+ Years Experience
+                        </div>
+                    </div>
+
+                    <p class="job-description">
+                        Create engaging activity guides, visual teaching aids, and hands-on science & math experiment blueprints for primary classrooms.
+                    </p>
+
+                    <div class="job-requirements">
+                        <h5>Key Requirements:</h5>
+                        <ul>
+                            <li>Strong portfolio of educational infographics, printables, or lesson plans.</li>
+                            <li>Creativity in making complex concepts intuitive for young learners.</li>
+                            <li>Fluency in English and Hindi curriculum standards.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-card-action">
+                        <a href="#apply-section" class="btn btn-primary apply-role-btn" data-role="Curriculum Content Designer" style="width: 100%; text-align: center;">
+                            <i class="fas fa-paper-plane"></i> Apply for this Role
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply-section" class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <div class="contact-grid" style="grid-template-columns: 1fr 1.5fr;">
+                <!-- Left Info Card -->
+                <div class="contact-info-card" style="background: linear-gradient(135deg, var(--clr-slate-950) 0%, var(--clr-slate-900) 100%);">
+                    <div class="contact-info-top">
+                        <h3 class="serif-font" style="color: var(--bg-white);">Join the Movement</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 30px;">
+                            Don't see an exact match for your skills? Send us a general application. We are always seeking passionate individuals who share our vision.
+                        </p>
+                        
+                        <div class="contact-detail-list">
+                            <div class="contact-detail-item">
+                                <i class="fas fa-envelope" style="color: var(--clr-emerald-400);"></i>
+                                <div>
+                                    <h5 style="color: var(--bg-white);">Careers Desk Email</h5>
+                                    <p style="color: rgba(255, 255, 255, 0.8);"><a href="mailto:info@shikshakshakticouncil26@gmail.com" style="color: inherit; text-decoration: none;">info@shikshakshakticouncil26@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <i class="fas fa-phone" style="color: var(--clr-emerald-400);"></i>
+                                <div>
+                                    <h5 style="color: var(--bg-white);">Call Desk</h5>
+                                    <p style="color: rgba(255, 255, 255, 0.8);"><a href="tel:+918800726212" style="color: inherit; text-decoration: none;">+91 8800726212</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <i class="fas fa-building" style="color: var(--clr-emerald-400);"></i>
+                                <div>
+                                    <h5 style="color: var(--bg-white);">Council Headquarters</h5>
+                                    <p style="color: rgba(255, 255, 255, 0.75);">Jaypee Klassic, Tower A9, 1501, Noida Sec 134, Jaypee Wishtown, GBN, UP - 201304</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Card -->
+                <div class="contact-form-card">
+                    <div style="margin-bottom: 24px;">
+                        <h3 class="serif-font">Submit Your Application</h3>
+                        <p style="color: var(--clr-slate-600); font-size: 0.95rem;">Fill out the form below and our recruitment team will reach out to you.</p>
+                    </div>
+
+                    <form class="contact-form active" id="job-application-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="app-name" class="form-label">Full Name *</label>
+                                <input type="text" id="app-name" class="form-control" placeholder="e.g. Ananya Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-email" class="form-label">Email Address *</label>
+                                <input type="email" id="app-email" class="form-control" placeholder="ananya@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="app-phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="app-phone" class="form-control" placeholder="+91 8800726212" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-role" class="form-label">Position Applied For *</label>
+                                <select id="app-role" class="form-control" required>
+                                    <option value="">Select a role...</option>
+                                    <option value="Master Educator & Trainer">Master Educator & Trainer</option>
+                                    <option value="EdTech Curriculum Specialist">EdTech Curriculum Specialist</option>
+                                    <option value="Regional Chapter & Community Coordinator">Regional Chapter & Community Coordinator</option>
+                                    <option value="Curriculum Content Designer">Curriculum Content Designer</option>
+                                    <option value="General Application">General Application</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="app-exp" class="form-label">Years of Relevant Experience *</label>
+                                <select id="app-exp" class="form-control" required>
+                                    <option value="0-2">0 - 2 Years</option>
+                                    <option value="3-5">3 - 5 Years</option>
+                                    <option value="5-8">5 - 8 Years</option>
+                                    <option value="8+">8+ Years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-link" class="form-label">Resume / LinkedIn / Portfolio Link</label>
+                                <input type="url" id="app-link" class="form-control" placeholder="https://linkedin.com/in/username">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="app-message" class="form-label">Statement of Purpose / Cover Message</label>
+                            <textarea id="app-message" class="form-control" rows="4" placeholder="Tell us briefly why you'd like to join the Shikshak Shakti Council..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                            <i class="fas fa-paper-plane"></i> Submit Application
+                        </button>
+                    </form>
+
+                    <div id="job-app-success" style="display: none; padding: 24px; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--clr-emerald-500); border-radius: var(--radius-lg); color: var(--clr-emerald-800); margin-top: 20px; text-align: center;">
+                        <i class="fas fa-circle-check" style="font-size: 2.5rem; color: var(--clr-emerald-600); margin-bottom: 12px;"></i>
+                        <h4>Application Received!</h4>
+                        <p style="margin-top: 8px;">Thank you for your interest in joining Shikshak Shakti Council. Our team will review your application and contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-container">
+                        <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
+                        <div class="logo-text">
+                            <span class="footer-brand-name">SHIKSHAK SHAKTI</span>
+                            <span class="footer-brand-subtitle">COUNCIL</span>
+                        </div>
+                    </div>
+                    <p>A confluence of knowledge, nature, and technology. Dedicated to empowering teachers, training resilient educators, and bringing active pedagogy to public classrooms.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Our Pillars</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#philosophy" class="footer-link">Knowledge Frameworks</a></li>
+                        <li><a href="index.html#philosophy" class="footer-link">Nature Environments</a></li>
+                        <li><a href="index.html#philosophy" class="footer-link">Technology Interventions</a></li>
+                        <li><a href="index.html#initiatives" class="footer-link">Smart Pedagogy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about" class="footer-link">About Founders</a></li>
+                        <li><a href="index.html#initiatives" class="footer-link">Shikshak Chaupal</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers & Openings</a></li>
+                        <li><a href="index.html#involve" class="footer-link">Trainer Opportunities</a></li>
+                        <li><a href="index.html#contact" class="footer-link">Contact Desk</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Stay Connected</h4>
+                    <p>Join our newsletter to receive training schedules and field logs from our council chapters.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Email Address" required aria-label="Email Address">
+                        <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--clr-emerald-400); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
+                <div class="footer-bottom-links">
+                    <a href="index.html#contact">Privacy Guidelines</a>
+                    <a href="index.html#contact">Terms of Engagement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Calendly Button -->
+    <a href="https://calendly.com/shikshak-shakti-council/counselling" target="_blank" class="floating-calendly-btn" aria-label="Book 1:1 Counselling Session">
+        <i class="fas fa-calendar-check"></i>
+        <span>1:1 Counselling</span>
+    </a>
+
+    <!-- Three.js 3D WebGL Library & GSAP Animation Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Core Interactions Logic -->
+    <script src="script.js"></script>
+    
+    <!-- Careers Interaction Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Category Filter for Job Cards
+            const filterBtns = document.querySelectorAll('.jobs-section .filter-btn');
+            const jobCards = document.querySelectorAll('.job-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    jobCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Pre-select role when clicking 'Apply for this Role' button
+            const applyBtns = document.querySelectorAll('.apply-role-btn');
+            const roleSelect = document.getElementById('app-role');
+
+            applyBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const role = btn.getAttribute('data-role');
+                    if (roleSelect && role) {
+                        roleSelect.value = role;
+                    }
+                });
+            });
+
+            // Form Submit Handler
+            const appForm = document.getElementById('job-application-form');
+            const appSuccess = document.getElementById('job-app-success');
+
+            if (appForm) {
+                appForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('app-name').value;
+                    const email = document.getElementById('app-email').value;
+                    const phone = document.getElementById('app-phone').value;
+                    const role = document.getElementById('app-role').value;
+
+                    if (name && email && phone && role) {
+                        appForm.style.display = 'none';
+                        appSuccess.style.display = 'block';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

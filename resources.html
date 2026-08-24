@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Pedagogy Library | Shikshak Shakti Council</title>
+    <meta name="description" content="Access free downloadable teaching resources, activity blueprints, lesson plan templates, and smart pedagogy guides by Shikshak Shakti Council.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="ssc.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Core Style Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .resource-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--clr-emerald-500);
+        }
+        .resource-type {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--clr-emerald-600);
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .resource-card h3 {
+            font-size: 1.2rem;
+            color: var(--clr-slate-900);
+            margin-bottom: 12px;
+        }
+        .resource-card p {
+            font-size: 0.9rem;
+            color: var(--clr-slate-600);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .resource-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--clr-slate-500);
+            border-top: 1px solid var(--clr-slate-100);
+            padding-top: 16px;
+            margin-top: auto;
+        }
+        .search-box-wrapper {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        .search-box-wrapper input {
+            width: 100%;
+            padding: 16px 24px 16px 54px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            font-size: 1rem;
+            box-shadow: var(--shadow-sm);
+            outline: none;
+            transition: var(--transition);
+        }
+        .search-box-wrapper input:focus {
+            border-color: var(--clr-emerald-500);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+        }
+        .search-box-wrapper i {
+            position: absolute;
+            left: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--clr-emerald-600);
+            font-size: 1.2rem;
+        }
+        @media (max-width: 992px) {
+            .resources-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .resources-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header" class="header scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html#home" class="logo-container">
+                    <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="brand-name">SHIKSHAK SHAKTI</span>
+                        <span class="brand-subtitle">COUNCIL</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">Our Mission</a></li>
+                    <li><a href="index.html#initiatives" class="nav-link">Initiatives</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="header-cta">
+                    <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-user-plus"></i> Join the Council</a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
+        <div class="container">
+            <h1 class="page-title serif-font">Resources & Pedagogy Library</h1>
+            <p class="page-subtitle">Free downloadable activity blueprints, lesson plan templates, and tactile teaching guides curated by master educators.</p>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section" style="background: var(--clr-slate-50);">
+        <div class="container">
+            <!-- Search & Filter Bar -->
+            <div class="search-box-wrapper">
+                <i class="fas fa-magnifying-glass"></i>
+                <input type="text" id="resource-search" placeholder="Search lesson plans, FLN guides, or activity kits...">
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Resources</button>
+                <button class="filter-btn" data-filter="fln">Foundational Literacy (FLN)</button>
+                <button class="filter-btn" data-filter="math">Math & STEM Activity</button>
+                <button class="filter-btn" data-filter="templates">Lesson Plan Templates</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="resources-grid">
+                <!-- Card 1 -->
+                <div class="resource-card" data-category="fln">
+                    <span class="resource-type"><i class="fas fa-file-pdf"></i> Activity Blueprint</span>
+                    <h3>Foundational English & Hindi Phonics Wheel</h3>
+                    <p>Tactile printable flashcard blueprint designed for primary grade teachers to build early reading fluency using low-cost materials.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-download"></i> PDF (2.4 MB)</span>
+                        <a href="index.html#contact" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="resource-card" data-category="math">
+                    <span class="resource-type"><i class="fas fa-file-pdf"></i> STEM Kit Blueprint</span>
+                    <h3>Natural Materials Math Kit Guide</h3>
+                    <p>Step-by-step instructions for structuring hands-on math counting, place value, and simple fractions using leaves, pebbles, and grid paper.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-download"></i> PDF (1.8 MB)</span>
+                        <a href="index.html#contact" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="resource-card" data-category="templates">
+                    <span class="resource-type"><i class="fas fa-file-word"></i> Editable Template</span>
+                    <h3>Weekly Smart Pedagogy Lesson Plan</h3>
+                    <p>A standardized 5-step lesson blueprint incorporating warm-up activity, concept mapping, interactive group exercise, and self-reflection.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-download"></i> DOCX (850 KB)</span>
+                        <a href="index.html#contact" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="resource-card" data-category="fln">
+                    <span class="resource-type"><i class="fas fa-file-pdf"></i> Storytelling Guide</span>
+                    <h3>Classroom Interactive Storytelling Manual</h3>
+                    <p>Techniques for primary educators to conduct story circles, role plays, and vocabulary building exercises in rural classrooms.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-download"></i> PDF (3.1 MB)</span>
+                        <a href="index.html#contact" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="resource-card" data-category="math">
+                    <span class="resource-type"><i class="fas fa-file-pdf"></i> Science Experiment Kit</span>
+                    <h3>Zero-Cost Physics & Chemistry Experiments</h3>
+                    <p>15 safe, engaging science experiments using household plastic bottles, water, straws, and magnets to demonstrate fundamental physical laws.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-download"></i> PDF (4.2 MB)</span>
+                        <a href="index.html#contact" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="resource-card" data-category="templates">
+                    <span class="resource-type"><i class="fas fa-file-pdf"></i> Assessment Checklist</span>
+                    <h3>Formative Classroom Observation Matrix</h3>
+                    <p>Quick 10-point evaluation rubric for educators to track student engagement, peer collaboration, and conceptual understanding.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-download"></i> PDF (1.2 MB)</span>
+                        <a href="index.html#contact" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-container">
+                        <img src="ssc.png" alt="Shikshak Shakti Council Logo" class="footer-logo-img">
+                        <div class="logo-text">
+                            <span class="footer-brand-name">SHIKSHAK SHAKTI</span>
+                            <span class="footer-brand-subtitle">COUNCIL</span>
+                        </div>
+                    </div>
+                    <p>A confluence of knowledge, nature, and technology. Dedicated to empowering teachers, training resilient educators, and bringing active pedagogy to public classrooms.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about" class="footer-link">About Founders</a></li>
+                        <li><a href="index.html#initiatives" class="footer-link">Shikshak Chaupal</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers & Openings</a></li>
+                        <li><a href="resources.html" class="footer-link">Resources Library</a></li>
+                        <li><a href="index.html#contact" class="footer-link">Contact Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shikshak Shakti Council. All Rights Reserved. | AI Technology Partner: <a href="https://teachpad.in/" target="_blank" style="color: var(--clr-emerald-400); font-weight: 700; text-decoration: underline;">Teachpad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js 3D WebGL Library & GSAP Animation Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('resource-search');
+            const resourceCards = document.querySelectorAll('.resource-card');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            let activeFilter = 'all';
+
+            const filterCards = () => {
+                const query = searchInput.value.toLowerCase().trim();
+                resourceCards.forEach(card => {
+                    const matchesCategory = activeFilter === 'all' || card.getAttribute('data-category') === activeFilter;
+                    const text = card.textContent.toLowerCase();
+                    const matchesQuery = !query || text.includes(query);
+
+                    if (matchesCategory && matchesQuery) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            };
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeFilter = btn.getAttribute('data-filter');
+                    filterCards();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterCards);
+            }
+        });
+    </script>
+</body>
+</html>
