@@ -2633,50 +2633,6 @@ textarea.form-control {
     color: #ffffff;
 }
 
-/* Google Drive Resource Hub Callout */
-.drive-hub-callout {
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
-    border: 2px dashed var(--clr-emerald-500);
-    border-radius: var(--radius-xl);
-    padding: 32px;
-    margin-bottom: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.drive-hub-info {
-    max-width: 650px;
-}
-
-.drive-hub-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    border-radius: var(--radius-full);
-    background: rgba(16, 185, 129, 0.15);
-    color: var(--clr-emerald-700);
-    font-size: 0.82rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.drive-hub-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--clr-slate-900);
-    margin-bottom: 8px;
-}
-
-.drive-hub-desc {
-    font-size: 0.95rem;
-    color: var(--clr-slate-600);
-    line-height: 1.6;
-}
-
 /* Reduced Motion for Accessibility */
 @media (prefers-reduced-motion: reduce) {
     *, ::before, ::after {
