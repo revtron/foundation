@@ -680,6 +680,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // 19. Copy Bank Details to Clipboard
+    const initBankCopy = () => {
+        const copyBtns = document.querySelectorAll('.copy-bank-btn');
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const textToCopy = btn.getAttribute('data-copy');
+                if (textToCopy) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        const originalText = btn.innerHTML;
+                        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        btn.style.background = 'var(--clr-emerald-500)';
+                        btn.style.color = '#ffffff';
+                        if (typeof showToast === 'function') {
+                            showToast(`Copied to clipboard: ${textToCopy}`);
+                        }
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.style.background = '';
+                            btn.style.color = '';
+                        }, 2500);
+                    }).catch(err => {
+                        console.error('Copy failed: ', err);
+                    });
+                }
+            });
+        });
+    };
+
     // INITIALIZE ADVANCED ANIMATION ENGINES
     initThreeJS();
     init3DTiltEffects();
@@ -688,4 +716,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initCustomCursor();
     initWhatsAppButton();
     initCookieBanner();
+    initBankCopy();
 });
