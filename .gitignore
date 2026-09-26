@@ -1,0 +1,3 @@
+# Ignore raw camera downloads from Google Drive
+images/drive_gallery/
+*.log
